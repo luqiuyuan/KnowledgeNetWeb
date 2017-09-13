@@ -110,6 +110,10 @@ class Server{
     return this.call('get', 'nodes', null, success_callback, fail_callback);
   }
 
+  postNodes(node, success_callback, fail_callback) {
+    return this.call('post', 'nodes', node, success_callback, fail_callback);
+  }
+
 }
 
 // module.exports= new Server();
