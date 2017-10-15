@@ -3,7 +3,7 @@ const axios  = require('axios');
 class Server{
 
   constructor(){
-    this.domain = 'https://knowledge-net-api.herokuapp.com';
+    this.domain = 'http://localhost:3001';
   }
 
   makeCancelable(promise, status) {
