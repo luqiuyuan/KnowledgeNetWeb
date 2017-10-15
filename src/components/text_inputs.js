@@ -6,7 +6,7 @@
 
 import React, {Component} from 'react';
 
-import {validateExistence, validateMinLength, validateMaxLength} from '../validations';
+import {validateExistence, validateMaxLength} from '../validations';
 
 import './styles/text_inputs.css';
 
@@ -23,7 +23,7 @@ export default class WookoTextInput extends Component {
       on_focus: false
     };
 
-    this._input_props = new Object();
+    this._input_props = {};
     Object
       .getOwnPropertyNames(this.props)
       .forEach(p => {
@@ -48,7 +48,7 @@ export default class WookoTextInput extends Component {
     }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.value != nextProps.value) {
+    if (this.props.value !== nextProps.value) {
       this.setState({
         text: nextProps.value
       }, this._onChangeText.bind(this, nextProps.value));

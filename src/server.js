@@ -114,6 +114,9 @@ class Server{
     return this.call('post', 'nodes', node, success_callback, fail_callback);
   }
 
+  updateNode(id, node, success_callback, fail_callback) {
+  }
+
 }
 
 // module.exports= new Server();
