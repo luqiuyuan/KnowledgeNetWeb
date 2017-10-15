@@ -115,6 +115,7 @@ class Server{
   }
 
   updateNode(id, node, success_callback, fail_callback) {
+    return this.call('patch', 'nodes/'+id, node, success_callback, fail_callback);
   }
 
 }
